@@ -1,0 +1,287 @@
+/* ==========================================================================
+Waybar - Floating Sweet Dark (Sharp Bar, Round Inner Modules)
+Palette: Gruvbox Dark (Material / Soft)
+Font: FiraCode Nerd Font
+========================================================================== */
+
+* {
+  border: none;
+  border-radius: 0; /* Reset global radius */
+  min-height: 0;
+  font-family: "FiraCode Nerd Font", "Symbols Nerd Font Mono";
+  font-size: 13px;
+  font-weight: 600; 
+}
+
+/* --------------------------------------------------------------------------
+Main Floating Bar (Sharp/Tight Corners)
+-------------------------------------------------------------------------- */
+
+window#waybar {
+    background: rgba(29, 32, 33, 0.75); 
+    border-radius: 8px; 
+    border: 1px solid rgba(168, 153, 132, 0.15); 
+    margin: 6px 12px 0px 12px; /* Reduced top margin slightly */
+    padding: 2px 4px; /* Tighter padding around the whole bar */
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* --------------------------------------------------------------------------
+Tooltips
+-------------------------------------------------------------------------- */
+
+tooltip {
+    background: #282828; 
+    border: 1px solid #b16286; 
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+tooltip label {
+    color: #ebdbb2; 
+    padding: 6px 10px;
+}
+
+/* --------------------------------------------------------------------------
+Common Module Style (Fully Rounded Pills)
+-------------------------------------------------------------------------- */
+
+#clock,
+#cpu,
+#memory,
+#battery,
+#pulseaudio,
+#network,
+#backlight,
+#tray,
+#window,
+#idle_inhibitor,
+#custom-network_traffic,
+#custom-keyboard-layout,
+#workspaces {
+    background: #3c3836; 
+    border: 1px solid rgba(213, 196, 161, 0.05);
+    border-radius: 50px; 
+    margin: 2px 3px; /* Reduced margin from 3px 5px to 2px 3px for closer gaps */
+    padding: 0 10px; /* Reduced horizontal padding from 15px to 10px for tighter pills */
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.03);
+}
+
+/* --------------------------------------------------------------------------
+Launcher
+-------------------------------------------------------------------------- */
+
+#custom-launcher {
+    background: linear-gradient(45deg, #b16286, #d3869b); 
+    color: #1d2021;
+    border-radius: 50px;
+    margin: 2px 3px;
+    padding: 0 12px;
+}
+
+/* --------------------------------------------------------------------------
+Power Button
+-------------------------------------------------------------------------- */
+
+#custom-power {
+    background: linear-gradient(45deg, #cc241d, #fb4934); 
+    color: #1d2021;
+    border-radius: 50px;
+    margin: 2px 3px;
+    padding: 0 12px;
+}
+
+/* --------------------------------------------------------------------------
+Workspaces
+-------------------------------------------------------------------------- */
+
+#workspaces {
+    padding: 0px 2px;
+    background: #282828; 
+}
+
+#workspaces button {
+    background: transparent;
+    color: #928374; 
+    border-radius: 50px;
+    margin: 2px 1px; /* Squeezed workspace numbers closer together */
+    min-width: 28px; /* Tighter button boundaries */
+    transition: none; /* FIXED: Removed transition delay on switching */
+}
+
+#workspaces button:hover {
+    background: rgba(142, 192, 124, 0.15);
+    color: #8ec07c;
+    transition: background 0.15s ease, color 0.15s ease; /* Keeps a small subtle hover effect if desired */
+}
+
+#workspaces button.active {
+    background: linear-gradient(45deg, #b8bb26, #8ec07c); 
+    color: #1d2021;
+    font-weight: 700;
+    box-shadow: 0 2px 4px rgba(142, 192, 124, 0.3);
+    transition: none; /* FIXED: Instantly applies active color */
+}
+
+#workspaces button.urgent {
+    background: #fb4934;
+    color: #1d2021;
+    box-shadow: 0 2px 4px rgba(251, 73, 52, 0.4);
+    transition: none;
+}
+
+/* --------------------------------------------------------------------------
+Window Title
+-------------------------------------------------------------------------- */
+
+#window {
+    color: #ebdbb2; 
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: 500;
+    padding: 0 8px;
+}
+
+/* --------------------------------------------------------------------------
+Clock
+-------------------------------------------------------------------------- */
+
+#clock {
+    color: #fabd2f; 
+}
+
+/* --------------------------------------------------------------------------
+CPU
+-------------------------------------------------------------------------- */
+
+#cpu {
+    color: #83a598; 
+}
+
+/* --------------------------------------------------------------------------
+Memory
+-------------------------------------------------------------------------- */
+
+#memory {
+    color: #fe8019; 
+}
+
+/* --------------------------------------------------------------------------
+Network & Network Traffic
+-------------------------------------------------------------------------- */
+
+#network {
+    color: #b8bb26; 
+}
+
+#network.disconnected {
+    color: #fb4934; 
+    background: rgba(251, 73, 52, 0.1);
+}
+
+#custom-network_traffic {
+    color: #8ec07c; /* Gruvbox Aqua - Stays clean next to workspaces */
+}
+
+/* --------------------------------------------------------------------------
+Audio
+-------------------------------------------------------------------------- */
+
+#pulseaudio {
+    color: #d3869b; 
+}
+
+#pulseaudio.muted {
+    color: #928374;
+    background: rgba(146, 131, 116, 0.1);
+}
+
+/* --------------------------------------------------------------------------
+Battery
+-------------------------------------------------------------------------- */
+
+#battery {
+    color: #b8bb26; 
+}
+
+#battery.charging {
+    color: #8ec07c; 
+}
+
+#battery.warning {
+    color: #fe8019; 
+    background: rgba(254, 128, 25, 0.1);
+}
+
+#battery.critical {
+    color: #fb4934; 
+    background: rgba(251, 73, 52, 0.2);
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* --------------------------------------------------------------------------
+Brightness
+-------------------------------------------------------------------------- */
+
+#backlight {
+    color: #fabd2f; 
+}
+
+/* --------------------------------------------------------------------------
+Idle Inhibitor
+-------------------------------------------------------------------------- */
+
+#idle_inhibitor {
+    color: #fe8019;
+}
+
+/* --------------------------------------------------------------------------
+Keyboard Layout
+-------------------------------------------------------------------------- */
+
+#custom-keyboard-layout {
+    color: #d3869b;
+}
+
+/* --------------------------------------------------------------------------
+Tray
+-------------------------------------------------------------------------- */
+
+#tray {
+    padding: 0 8px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    background: #fb4934;
+    border-radius: 50px;
+}
+
+/* --------------------------------------------------------------------------
+Animations & Keyframes
+-------------------------------------------------------------------------- */
+
+/* FIXED: Excluded workspaces from the catch-all global transition */
+*:not(button) {
+    transition-property: background-color, border-color, color, box-shadow;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+}
+
+@keyframes blink {
+    to {
+        background-color: #fb4934;
+        color: #1d2021;
+    }
+}
