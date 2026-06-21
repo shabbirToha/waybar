@@ -33,7 +33,7 @@
             "1": "󰈹",
             "2": "󰆍",
             "3": "󰨞",
-            "4": "󰍹",
+            "4": "",
             "5": "󰒓",
             "6": "󰕄",
             "7": "󰊠",
@@ -41,7 +41,10 @@
             "9": "󰏘",
             "10": "󰘔",
             "default": ""
-        }
+        },
+    "persistent-workspaces": {
+            "*": [1, 2, 3]
+        },
     },
 
     "network#speed": {
@@ -132,7 +135,7 @@
     },
 
     "custom/launcher": {
-        "format": "",
+        "format": "",
         "tooltip": false,
         "on-click": "rofi -show drun"
     },
@@ -140,6 +143,6 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
-        "on-click": "nwgbar"
+        "on-click": "~/.config/rofi/scripts/powermenu.sh"
     }
 }
