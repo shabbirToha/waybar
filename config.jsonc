@@ -41,10 +41,7 @@
             "9": "󰏘",
             "10": "󰘔",
             "default": ""
-        },
-    "persistent-workspaces": {
-            "*": [1, 2, 3]
-        },
+        }
     },
 
     "network#speed": {
@@ -65,13 +62,13 @@
     "cpu": {
         "format": "󰍛 {usage}%",
         "tooltip": true,
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
 
     "memory": {
         "format": "󰘚 {}%",
         "tooltip": true,
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
 
     "pulseaudio": {
@@ -135,7 +132,7 @@
     },
 
     "custom/launcher": {
-        "format": "",
+        "format": "👻",
         "tooltip": false,
         "on-click": "rofi -show drun"
     },

@@ -6,7 +6,7 @@ Font: FiraCode Nerd Font
 
 * {
   border: none;
-  border-radius: 0; /* Reset global radius */
+  border-radius: 10px; /* Reset global radius */
   min-height: 0;
   font-family: "FiraCode Nerd Font", "Symbols Nerd Font Mono";
   font-size: 13px;
@@ -18,8 +18,8 @@ Main Floating Bar (Sharp/Tight Corners)
 -------------------------------------------------------------------------- */
 
 window#waybar {
-    background: rgba(29, 32, 33, 0.75); 
-    border-radius: 8px; 
+    background: rgba(29, 32, 33, 0.95); 
+    border-radius: 40px; 
     border: 1px solid rgba(168, 153, 132, 0.15); 
     margin: 6px 12px 0px 12px; /* Reduced top margin slightly */
     padding: 2px 4px; /* Tighter padding around the whole bar */
@@ -77,7 +77,7 @@ Launcher
 #custom-launcher {
     background: linear-gradient(45deg, #b16286, #d3869b); 
     color: #1d2021;
-    border-radius: 50px;
+    border-radius: 70px;
     margin: 2px 3px;
     padding: 0 12px;
 }
@@ -142,7 +142,7 @@ Window Title
     background: #2f3831;
     border: none;
     box-shadow: none;
-    font-weight: 500;
+    font-weight: 700;
     padding: 0 8px;
 }
 
